@@ -18,3 +18,9 @@ npm install
 That Should be all for basic setup unless I add something else.
 
 ## Node Server setup.
+
+Run the following command to start local server.
+
+```
+node server.js
+```
