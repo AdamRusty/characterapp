@@ -4,9 +4,10 @@
   "description": "Here I have created a simple gulpfile to use in web development projects.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js", // runs the server
-    "start-prod": "node server-prod.js" // runs the prod server
+    "test": "echo \"Error: no test specified\" && exit 1",      
+    "good-boi": "echo \"Woof Woof\"",
+    "start": "node server.js", 
+    "startProd": "node server-prod.js"
   },
   "repository": {
     "type": "git",

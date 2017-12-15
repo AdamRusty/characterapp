@@ -28,8 +28,9 @@ gulp.task("minifyJs", ["concatJs"], function() {
     return gulp.src("js/app.js")
         .pipe(uglify())
         .pipe(rename('app.min.js'))
-        .pipe(gulp.dest('public/js'));
+        .pipe(gulp.dest('build/js'));
 });
+
 
 /* Compile Sass */
 gulp.task('compileSass', function() {
@@ -55,15 +56,15 @@ gulp.task('watch', function() {
 
 gulp.task('data', function() {
     return gulp.src('js/data/**')
-        .pipe(gulp.dest('public/data'));
+        .pipe(gulp.dest('build/data'));
 })
 
 /* gulp prod */
 /* Moves compiled files to production. */
 gulp.task('prod', ['minifyJs', 'compileSass'], function () {
     return gulp.src([
-        'public/css/app.css', 
-        'public/js/app.min.js',
+        'build/css/app.css', 
+        'build/js/app.min.js',
         'index.html',
         'img/**', 
         'fonts/**'
@@ -75,7 +76,8 @@ gulp.task('prod', ['minifyJs', 'compileSass'], function () {
 
 /* gulp build */
 /* Backup if gulp cannot be used. */
-gulp.task("build", ['minifyJs', 'compileSass', 'data']);
+/* Removed minify to enable me to use that fancy ES2015\16 */
+gulp.task("build", ['concatJs', 'compileSass', 'data']);
 
 /* gulp */
 gulp.task("default", ["build"]);
