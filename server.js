@@ -16,7 +16,7 @@ opn('localhost:3000/', {app: 'firefox'});
 
 app.get("/", (req, res) => {
     console.log('here');
-    res.render("index", {title: 'D&Dapp', message: "First pug bootup successful! :D" });
+    res.render("index", {title: 'D&Dapp'});
 });
 
 

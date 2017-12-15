@@ -4,9 +4,9 @@
   "description": "Here I have created a simple gulpfile to use in web development projects.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",      
+    "test": "echo \"Error: no test specified\" && exit 1",
     "good-boi": "echo \"Woof Woof\"",
-    "start": "node server.js", 
+    "start": "node server.js",
     "startProd": "node server-prod.js"
   },
   "repository": {

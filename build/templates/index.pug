@@ -3,4 +3,22 @@ html
     head
         title= title
     body
-        h1= message
+        header
+            h1= name
+            img.appLogo(src="", alt="appLogo")
+            
+        section.login
+            .username
+                label(for="userName") Username: 
+                input#userName.input--login(type="text")
+            .password
+                label(for="passWord") Password: 
+                input#passWord.input--login(type="text")
+            button#loginSubmit Login            
+        nav
+            a
+            a
+            a
+            a
+            a            
+            
